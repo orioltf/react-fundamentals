@@ -26,22 +26,19 @@
 		// rootElement.append(element)
 
 		const elementProps = {
-			children: [
-				React.createElement('span', {
-					children: 'Hello',
-				}),
-				' ',
-				React.createElement('span', {
-					children: 'World',
-				}),
-			],
 			className: 'container',
 		}
 
 		// 🐨 Please re-implement the regular document.createElement code above
 		// with these React API calls
 		// 💰 The example in the markdown file should be a good hint for you.
-		const reactElement = React.createElement('div', elementProps)
+		const reactElement = React.createElement(
+			'div',
+			elementProps,
+			React.createElement('span', null, 'Hello'),
+			' ',
+			React.createElement('span', {}, 'World')
+		)
 		ReactDOM.render(reactElement, rootElement)
 	</script>
 </body>
