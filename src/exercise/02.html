@@ -26,7 +26,15 @@
 		// rootElement.append(element)
 
 		const elementProps = {
-			children: 'Hello world!',
+			children: [
+				React.createElement('span', {
+					children: 'Hello',
+				}),
+				' ',
+				React.createElement('span', {
+					children: 'World',
+				}),
+			],
 			className: 'container',
 		}
 
